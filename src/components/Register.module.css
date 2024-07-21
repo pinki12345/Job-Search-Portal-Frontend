@@ -1,0 +1,123 @@
+/* body {
+  overflow: hidden;
+} */
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+
+.loginContainer {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginForm {
+  flex: 1;
+  padding: 40px;
+}
+
+.loginForm h2 {
+  margin-bottom: 10px;
+}
+
+.loginForm p {
+  color: #525252;
+  margin-bottom: 30px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btnSignin {
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #ff4b5c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btnSignin:hover {
+  background-color: #ff2a3b;
+}
+
+.signupLink {
+  margin-top: 20px;
+}
+
+.signupLink a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.signupLink a:hover {
+  text-decoration: none;
+}
+.signIncheckbox label {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.signIncheckbox p {
+  margin-right: 10px;
+  font-size: 12px;
+}
+.loginImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.loginImage h2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+}
+
+.loginImage img {
+  max-width: 100%;
+  /* height: auto; */
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .loginContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loginImage {
+    display: none;
+  }
+}

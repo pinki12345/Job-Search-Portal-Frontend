@@ -1,0 +1,510 @@
+.jobFinderConatiner {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 3vh;
+  padding: 30px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 0 8px 4px rgba(255, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: white;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.filtersContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+
+.skillsButton {
+  padding: 5px;
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border: 1px solid #9c9c9c;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.dropdownArrow {
+  margin-left: 10px;
+  color: #9c9c9c;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  width: 20%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(211, 211, 211, 0.8);
+}
+
+.dropdownItem {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #f0f0f0;
+}
+
+.selectedSkills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skillTag {
+  display: flex;
+  align-items: center;
+  background-color: #ffeeee;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.skillTag p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 5px;
+  margin-left: 5px;
+}
+.removeButton {
+  background-color: #ff6b6b;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
+  padding: 5px;
+  color: #fff;
+}
+
+.applyButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff4b5c;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  color: #ff4b5c;
+  cursor: pointer;
+}
+
+.cardJobContainer {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  margin-top: 4vh;
+  height: 50vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: baseline; */
+  width: 60vw;
+  height: 12vh;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 2rem;;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 0 8px 4px rgba(255, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+.cardContainer {
+  display: flex;
+  width: 60vw;;
+
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rightsider {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.rightBox{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width: 90%;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.meta {
+  display: flex;
+  margin-top: 5px;
+  color: #777;
+}
+.metaItem img {
+  height: 14px;
+}
+.metaItem {
+  display: flex;
+  font-size: 0.9em;
+  margin-right: 25px;
+  align-items: baseline;
+  gap: 5px;
+}
+.tags{
+  display: flex;
+}
+.tag {
+  display: inline-block;
+  background-color: #ffeeee;
+  color: #000000;
+  padding: 4px 8px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-top: 2vh;
+  justify-content: space-between;
+}
+
+.status {
+  display: inline-block;
+  margin-right: 10px;
+  color: #f00;
+  font-size: 0.9em;
+}
+.footStatus {
+  display: flex;
+  gap: 2vw;
+}
+.button {
+  padding: 0.5vw 1vw;
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.button:hover {
+  background-color: #cc0000;
+}
+
+.Deletebutton{
+  display: flex;
+  gap:0.5vw;
+}
+.dropdownMenu {
+  position: absolute;
+  z-index: 10;
+  width: 20%;
+  max-height: 180px; 
+  overflow-y: auto; 
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  scrollbar-width: none;
+}
+
+.dropdownItem.selected {
+  background-color: #d3d3d3;
+}
+
+.skillsButton.active {
+  background-color: #e8e8e8; /* Gray background for active state */
+}
+
+@media (max-width: 768px) {
+  .filters {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .filtersContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 60%;
+  }
+  
+  .skillsButton {
+    padding: 5px;
+    width: 75%;
+    margin-right: 10px;
+    position: relative;
+   
+  }
+  
+  .dropdownArrow {
+    margin-left: 10px;
+    color: #9c9c9c;
+  }
+  
+  .dropdownMenu {
+    position: absolute;
+    z-index: 10;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+   /* left:3vw; */
+    max-height: 180px; 
+    overflow-y: auto; 
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scrollbar-width: none;
+  }
+  .dropdownItem {
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .dropdownItem:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selectedSkills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+  }
+  .skillTag {
+    display: flex;
+    align-items: center;
+    background-color: #ffeeee;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+  .skillTag p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 5px;
+    margin-left: 5px;
+  }
+  .removeButton {
+    background-color: #ff6b6b;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+    padding: 5px;
+    color: #fff;
+  }
+  
+  .applyButton {
+   display: flex;
+   padding: 5px 10px;
+  }
+  .filtersbtn{
+    display: flex;
+    margin-right: 10px;
+    flex-direction:row;
+    align-items: center;
+    gap:2vw
+  }
+  .clearButton {
+    
+  }
+  .rightBox{
+    display: flex;
+    flex-direction:column;
+  }
+  .cardJobContainer {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    margin-top: 4vh;
+    height: 50vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  .card {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    /* align-items: baseline; */
+    width: 60vw;
+    height:auto;
+    margin: 0 auto;
+    margin-top: 1rem;
+    /* padding:15px; */
+     
+
+    margin-bottom: 1rem;
+  }
+  .cardContainer {
+    display: flex;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rightsider {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo {
+    width:25px;
+    height:25px;
+    margin-right: 16px;
+    border-radius: 50%;
+  }
+  
+  .title {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .meta {
+    display: flex;
+    margin-top: 5px;
+    color: #777;
+  }
+  .metaItem img {
+    height: 14px;
+  }
+  .metaItem {
+    display: flex;
+    font-size: 0.9em;
+    margin-right:2vw;
+    /* align-items: baseline; */
+    flex-direction: column;
+    /* gap: 5px; */
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #ffeeee;
+    color: #000000;
+    padding: 4px 8px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: space-between;
+  }
+  
+  .status {
+    display: inline-block;
+    margin-right: 10px;
+    color: #f00;
+    font-size: 0.9em;
+  }
+  .footStatus {
+    display: flex;
+    gap: 2vw;
+  }
+  .button {
+    padding: 4px 8px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    
+  }
+  
+  .button:hover {
+    background-color: #cc0000;
+  }
+  
+  .Deletebutton{
+    display: flex;
+    gap:0.5vw;
+  }
+  
+  .dropdownItem.selected {
+    background-color: #d3d3d3;
+  }
+  
+  .skillsButton.active {
+    background-color: #e8e8e8; /* Gray background for active state */
+  }
+}
