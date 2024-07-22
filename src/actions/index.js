@@ -38,7 +38,7 @@ export const setJobDetailsData = (data) => ({
 export const fetchAllJobData = () => {
   return (dispatch) => {
     dispatch(setLoading(true));
-    fetch("http://localhost:3000/api/v1/getAllJobs")
+    fetch("https://job-search-portal-backend.onrender.com/api/v1/getAllJobs")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -65,7 +65,7 @@ export const fetchSearchingData = (data) => {
   return (dispatch) => {
     dispatch(setLoading(true));
     console.log("data", data);
-    fetch(`http://localhost:3000/api/v1/searchJobs/${data}`)
+    fetch(`https://job-search-portal-backend.onrender.com/api/v1/searchJobs/${data}`)
       .then((response) => {
         console.log("response.......", response);
         if (!response.ok) {
@@ -94,7 +94,7 @@ export const fetchSkillData = (data) => {
     dispatch(setLoading(true));
     console.log("data", data);
 
-    fetch(`http://localhost:3000/api/v1/filterJobs/${data}`)
+    fetch(`https://job-search-portal-backend.onrender.com/api/v1/filterJobs/${data}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -120,7 +120,7 @@ export const fetchSkillData = (data) => {
 export const fetchJobDetails = (id) => {
   return (dispatch) => {
     dispatch(setLoading(true));
-    fetch(`http://localhost:3000/api/v1/getJobs/${id}`)
+    fetch(`https://job-search-portal-backend.onrender.com/api/v1/getJobs/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

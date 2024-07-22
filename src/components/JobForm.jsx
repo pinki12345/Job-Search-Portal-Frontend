@@ -114,7 +114,7 @@ const JobForm = () => {
         let response;
         if (jobDetails) {
           response = await axios.patch(
-            `http://localhost:3000/api/v1/updateJob/${jobDetails._id}`,
+            `https://job-search-portal-backend.onrender.com/api/v1/updateJob/${jobDetails._id}`,
             formData,
             {
               headers: {
@@ -124,7 +124,7 @@ const JobForm = () => {
           );
         } else {
           response = await axios.post(
-            "http://localhost:3000/api/v1/createJob",
+            "https://job-search-portal-backend.onrender.com/api/v1/createJob",
             formData,
             {
               headers: {

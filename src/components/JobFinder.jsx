@@ -94,7 +94,7 @@ const JobFinder = () => {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/v1/deleteJob/${id}`,
+        `https://job-search-portal-backend.onrender.com/api/v1/deleteJob/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
