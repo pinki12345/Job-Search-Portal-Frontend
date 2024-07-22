@@ -29,6 +29,7 @@ const Register = () => {
     const response = await signup({ ...signUp });
     if (response.success) {
       alert("Account created successfully!");
+      navigate('/login');
     } else {
       alert(response.message);
     }
