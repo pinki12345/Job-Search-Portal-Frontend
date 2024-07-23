@@ -3,17 +3,13 @@ export const SET_ERROR = "SET_ERROR";
 export const SET_TOKEN = "SET_TOKEN";
 export const SET_SEARCH_DATA = "SET_SEARCH_DATA";
 export const SET_JOB_DETAILS_DATA = "SET_JOB_DETAILS_DATA";
-export const SET_USER = "SET_USER";
+
 
 export const setToken = (payload) => ({
   type: SET_TOKEN,
   payload,
 });
 
-export const setUser = (payload) => ({
-  type: SET_USER,
-  payload,
-});
 
 export const setLoading = (payload) => ({
   type: SET_LOADING,

@@ -10,10 +10,9 @@ import { useSelector } from "react-redux";
 const Header = () => {
 
   const token = useSelector((state) => state.token);
-  console.log("Header Token", token);
-  const data = useSelector((state) => state.user);
-  console.log("Data Token", data);
-  // const data = useSelector((state) => state.user)
+  
+  // const data = useSelector((state) => state.user);
+  const data = JSON.parse(localStorage.getItem("user"))
 
   const navigate = useNavigate();
 

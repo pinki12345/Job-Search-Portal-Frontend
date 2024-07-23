@@ -4,12 +4,10 @@ import {
   SET_TOKEN,
   SET_SEARCH_DATA,
   SET_JOB_DETAILS_DATA,
-  SET_USER,
 } from "../actions/index";
 
 const initialState = {
   token: localStorage.getItem("token") || null,
-  user:{},
   isLoading: false,
   error: null,
   searchData: [],
@@ -23,11 +21,6 @@ const authReducer = (state = initialState, action) => {
         ...state,
         token: action.payload,
       };
-      case SET_USER:
-        return {
-          ...state,
-          user: action.payload,
-        };
     case SET_LOADING:
       return {
         ...state,
