@@ -16,6 +16,7 @@ import rupee from "../assets/rupee.png";
 import axios from "axios";
 
 const JobFinder = () => {
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const searchData = useSelector((state) => state.searchData);
@@ -59,6 +60,7 @@ const JobFinder = () => {
     dispatch(fetchJobDetails(id));
     navigate("/jobdescription");
   };
+
   const handleChange = (e) => {
     setInputData(e.target.value);
   };
@@ -295,6 +297,7 @@ const JobFinder = () => {
           <p>No jobs found.</p>
         )}
       </div>
+
     </div>
   );
 };

@@ -28,6 +28,13 @@ const Register = () => {
     }
     const response = await signup({ ...signUp });
     if (response.success) {
+      setSignUpData({
+        name: "",
+        email: "",
+        password: "",
+        mobile: "",
+        agreedToTerms: false,
+      })
       alert("Account created successfully!");
       navigate('/login');
     } else {

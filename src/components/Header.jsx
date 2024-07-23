@@ -8,9 +8,12 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Header = () => {
+
   const token = useSelector((state) => state.token);
   console.log("Header Token", token);
-  const data = useSelector((state) => state.user)
+  const data = useSelector((state) => state.user);
+  console.log("Data Token", data);
+  // const data = useSelector((state) => state.user)
 
   const navigate = useNavigate();
 
@@ -64,7 +67,7 @@ const Header = () => {
               Logout
             </span>
             <div className={styles.userInfo}>
-              <span className={styles.userName}>{data.name}</span>
+              <span className={styles.userName}>{data?.name}</span>
               <div className={styles.circle}>{getInitials(data)}</div>
             </div>
           </div>

@@ -3,10 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { login } from "../apis/auth";
 import styles from "./Register.module.css";
 import img from "../assets/register.png";
+import {useDispatch} from "react-redux";
+import {setUser } from "../actions";
 
 const Login = () => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
+  const navigate = useNavigate();
   const [signIn, setSignInData] = useState({
     email: "",
     password: "",
@@ -26,13 +29,13 @@ const Login = () => {
    console.log("token: " + token);
   if (token) {
     localStorage.setItem("token", token);
-    localStorage.setItem("user", JSON.stringify(response.data?.user));
+    console.log("Data........",response.data?.user)
+    dispatch(setUser(response.data?.user)) ;
     navigate("/");
   } else {
     alert("Token not found in response headers.");
   }
   };
-
   const handleClick = () => {
     navigate("/register");
   };

@@ -188,6 +188,7 @@ const JobForm = () => {
     setItems([]);
     setSkillError("");
   };
+  
   const handleBack = () => {
     navigate("/jobdescription");
   };
